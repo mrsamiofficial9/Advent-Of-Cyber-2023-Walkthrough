@@ -4,3 +4,6 @@
 <h3 style="font-style: italic; font-size: 18px; padding-right: 18px; font-weight:800">Answer Of The Question Below</h3>
 <br>
 <h5>What is McGreedy's personal email address?</h5>
+```plaintext
+    t.mcgreedy@antarcticrafts.thm
+```
