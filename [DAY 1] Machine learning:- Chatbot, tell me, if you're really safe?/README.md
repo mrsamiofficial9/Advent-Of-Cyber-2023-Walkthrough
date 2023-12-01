@@ -7,3 +7,12 @@
 
 ```python
 t.mcgreedy@antarcticrafts.thm
+```
+#### What is the password for the IT server room door?
+```python
+BtY2S02
+```
+#### What is the name of McGreedy's secret project?
+```python
+Purple Snow
+```
