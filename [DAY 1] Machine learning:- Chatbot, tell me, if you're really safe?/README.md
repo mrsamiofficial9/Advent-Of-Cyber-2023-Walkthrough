@@ -1,36 +1,1596 @@
-<h1 align="center" style="color:green;">The Story</h1>
-<img align="center" src="https://tryhackme-images.s3.amazonaws.com/user-uploads/63588b5ef586912c7d03c4f0/room-content/fa2b10afd679df9896a1de9ee2a4486b.svg">
-<br>
-<p>McHoneyBell and her team were the first from Best Festival Company to arrive at the AntarctiCrafts office in the South Pole. Today is her first day on the job as the leader of the "Audit and Vulnerabilities" team, or the "B Team" as she affectionately calls them.</p>
-<br>
-<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/63588b5ef586912c7d03c4f0/room-content/8447511ae3fa9f6a11c9be68e917cc4e.svg" style="width:208.945px;vertical-align: middle;height:auto !important;float:right;height:348.227px" class="note-float-right" alt="AOC 2023 - Prompt Injection"></p>
-<p>In her mind, McSkidy's Security team have been the company's rockstars for years, so it's only natural for them to be the "A Team". McHoneyBell's new team will be second to them but equally as important. They'll operate in the shadows.</p>
-<br>
-<p>McHoneyBell puts their friendly rivalry to the back of her mind and focuses on the tasks at hand. She reviews the day's agenda and sees that her team's first task is to check if the internal chatbot created by AntarctiCrafts meets Best Festival Company's security standards. She's particularly excited about the chatbot, especially since discovering it's powered by artificial intelligence (AI). This means her team can try out a new technique she recently learned called prompt injection, a vulnerability that affects insecure chatbots powered by natural language processing (NLP).</p>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
-.<br>
 
-<h5 style="padding-right: 18px; font-weight: 800; font-style: itcalic; font-size: 18px;">Answer Of the question below</h5>
-<br>
-<p style="display: block;box-sizing: border-box;">
-What is McGreedy's personal email address?</p>
-<br>
-<input type="text" style="border-radius: 4px; transition: none; background-color: #e9ecef; opacity: 1;" placeholder="Answer format: *.***********************.***" value="t.mcgreedy@antarcticrafts.thm" disabled="">
+<!DOCTYPE html>
+<html>
+<head>
+<title>TryHackMe | Advent of Cyber 2023</title>
+<meta name="description" content="Get started with Cyber Security in 24 Days - Learn the basics by doing a new, beginner friendly security challenge every day leading up to Christmas." />
+<meta name="og:description" content="Get started with Cyber Security in 24 Days - Learn the basics by doing a new, beginner friendly security challenge every day leading up to Christmas." />
+<meta name="keywords" content="cyber,security,cyber security,cyber security training,coding,computer,bitcoin,hacking,hackers,hacks,hack,exploits,keylogger,learn,poc" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
+<meta property="og:site_name" content="TryHackMe">
+<meta property="og:title" content="TryHackMe | Advent of Cyber 2023">
+<meta property="og:image" content="https://tryhackme-images.s3.amazonaws.com/room-icons/4e74879b69d5f707f90a416c3073dbed.svg">
+<meta property="og:url" content="https://tryhackme.com/room/adventofcyber2023">
+<meta name="twitter:image" content="https://tryhackme.com/img/meta/default.png">
+<meta property="og:description" content="Get started with Cyber Security in 24 Days - Learn the basics by doing a new, beginner friendly security challenge every day leading up to Christmas.">
+<meta charset="utf-8">
+<script src="https://assets.tryhackme.com/js/jquery.min.js?v=3.5.1"></script>
+<script src="https://assets.tryhackme.com/js/popper.min.js"></script>
+<script>
+    const userExists = "true";
+
+    window.optimizely = window.optimizely || [];
+    window.optimizely.push({
+      type: 'user',
+      attributes: {
+        is_logged_in: userExists === 'true'
+      }
+    })
+  </script>
+<script src="https://cdn.optimizely.com/js/24671560256.js"></script>
+<link rel="stylesheet" href="https://assets.tryhackme.com/css/boostrap431.min.css">
+<script src="https://assets.tryhackme.com/js/bootstrap431.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz" crossorigin="anonymous">
+<link rel="icon" type="image/png" href="https://assets.tryhackme.com/img/favicon.png" />
+<link rel="stylesheet" media="screen" href="https://assets.tryhackme.com/css/general-style.css?v=2.11">
+<script src="https://assets.tryhackme.com/js/script.js?v=3.12"></script>
+<script src="https://assets.tryhackme.com/js/validation.js"></script>
+<script type="text/javascript">
+    !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:{}};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e._q.push({name:t,args:Array.prototype.slice.call(r,0)})},i=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))};o(e,t,Array.prototype.slice.call(arguments))}},a=function(e){for(var t=0;t<g.length;t++)i(e,g[t],!1);for(var r=0;r<m.length;r++)i(e,m[r],!0)};r.invoked=!0;var c=t.createElement("script");c.type="text/javascript",c.integrity="sha384-sBFQqoO3bx3qM8f+iksNzu/E3v0rdkVlvzRqpvP+ynsUk/uaCIsa+NPjw5N04mpg",c.crossOrigin="anonymous",c.async=!0,c.src="https://cdn.amplitude.com/libs/analytics-browser-2.3.3-min.js.gz",c.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var u=t.getElementsByTagName("script")[0];u.parentNode.insertBefore(c,u);for(var l=function(){return this._q=[],this},p=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],d=0;d<p.length;d++)n(l,p[d]);r.Identify=l;for(var v=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],y=0;y<f.length;y++)n(v,f[y]);r.Revenue=v;var g=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],m=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];a(r),r.createInstance=function(e){return r._iq[e]={_q:[]},a(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+    
+    amplitude.init("d09a34bd2da2173645f4671e8b72dc11", { defaultTracking: false });
+  </script>
+<script src="https://unpkg.com/@amplitude/experiment-js-client@1.9.0/dist/experiment.umd.js"></script>
+<script type="module">
+      window.experiment = Experiment.Experiment.initializeWithAmplitudeAnalytics("client-KsETFcRbQMN9hDMtAaA0aSSgCasMxJkv", {
+        automaticExposureTracking: true,
+        fetchOnStart: true
+      });
+      await window.experiment.start({
+        user_id: "63d9673e6a43b4004256a5a1",
+      })
+    </script>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WPFM5LPL');</script>
+
+
+<script>
+    window.intercomSettings = {
+      api_base: "https://api-iam.intercom.io",
+      app_id: "pgpbhph6"
+    };
+  </script>
+<script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 1950941, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+<script>
+    /* Global javascript variables */
+
+    // Used inside script.js for createRooms compelted users.
+    const username = 'Mr.Sami'
+    const subscribed = '0'
+    const level = '12'
+    const intercomEnabled = 'true'
+  </script>
+<script>
+    //add back tracking info
+    const userId = "63d9673e6a43b4004256a5a1"
+    let tutorialComplete = false
+    if ('false' == "true") {
+      tutorialComplete = true
+    }
+    if(intercomEnabled === "true"){
+      window.intercomSettings = {
+        api_base: "https://api-iam.intercom.io",
+        app_id: "pgpbhph6",
+        user_id: userId,
+        username: username,
+        email: "samitesfaye726@gmail.com",
+        created_at: Math.floor(new Date("Tue Jan 31 2023 19:08:46 GMT+0000 (Greenwich Mean Time)").getTime() / 1000), // Signup date as a Unix timestamp
+        user_hash: '2bc8766abe392558ccbc55868965b08538de177b054fc244688afc5c7693df83'
+      };
+    }
+    window.hj('identify', userId, {
+      displayName: username,
+      subscribed: "0",
+      dateSignUp: "Tue Jan 31 2023 19:08:46 GMT+0000 (Greenwich Mean Time)",
+      experience: "intermediate"
+    })
+  </script>
+<script type="application/ld+json">
+
+   {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "url":"https://tryhackme.com",
+      "name":"TryHackMe",
+      "logo":"https://tryhackme.com/img/favicon.png",
+      "description":"TryHackMe is a free online platform for learning cyber security, using hands-on exercises and labs, all through your browser!",
+      "email": "support@tryhackme.com",
+      "sameAs":[
+         "https://www.linkedin.com/company/tryhackme",
+         "https://twitter.com/realtryhackme"
+      ]
+   }
+
+</script>
+<script>
+    console.log(`%c
+      ------------------
+      < Happy Hacking! >
+      ------------------
+              \\   ^__^
+               \\  (oo)\\_______
+                  (__)\\       )\\/\\
+                      ||----w |
+                      ||     ||`, "font-family:monospace")
+  </script>
+<script>
+  (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/pgpbhph6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  let socket = io.connect({
+    transports: ['websocket'],
+    reconnection: true,
+    reconnectionDelay: 1000,
+    reconnectionAttempts: 10
+  })
+</script>
+<body>
+<link href="https://assets.tryhackme.com/css/scoreboard.css" rel="stylesheet" type="text/css">
+<link href="https://assets.tryhackme.com/css/utils/introjs.css?v=1.0" rel="stylesheet" type="text/css">
+<link href="https://assets.tryhackme.com/css/utils/slideout.css" rel="stylesheet" type="text/css">
+<link href="https://assets.tryhackme.com/css/pages/public-rooms.css?v=1.7" rel="stylesheet" type="text/css">
+<link href="https://assets.tryhackme.com/css/libs/asciinema-player.css" rel="stylesheet" type="text/css"> 
+<link href="https://assets.tryhackme.com/css/libs/prism.css?v=0.2" rel="stylesheet" type="text/css"> 
+<link href="https://assets.tryhackme.com/css/libs/magnific-popup.css" rel="stylesheet" type="text/css"> 
+<script src="https://assets.tryhackme.com/js/libs/lottie-player.js"></script>
+<div id="loading">
+<div id="preloader">
+<div id="loader"></div>
+</div>
+</div>
+<div id="room-content">
+<div id="room-content-main">
+
+<nav class="navbar navbar-expand-md navbar-dark navbar-color-loggedin navbar-main">
+<div class="container">
+<button id="thm-mobile-nav-open" class="thm-nav__hamburger-btn" data-target="#thm-mobile-nav-menu" aria-controls="thm-mobile-nav-menu" aria-expanded="false" aria-label="Open mobile navigation">
+<span class="thm-nav__hamburger-lines"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+<div class="navbar-brand" href="/">
+<a href="/dashboard">
+<img width="115px" src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" alt="TryHackMe" class="logo" />
+</a>
+</div>
+<ul class="navbar-nav mr-auto mt-2 mt-lg-0 navbar-pagelinks">
+<li class="nav-item ">
+<a class="nav-link" href="/dashboard">
+<i class="navbar-item-icon far fa-browser"></i>
+<div class="navbar-item-text">Dashboard</div>
+</a>
+</li>
+<li class="nav-item active dropdown lite-removable" id="nav-learn">
+<a id="nav-other" class="nav-link" href="#" data-toggle="dropdown">
+<i class="navbar-item-icon far fa-book-open"></i>
+<div class="navbar-item-text">Learn</div>
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<a class="dropdown-item d-flex vertical-align-custom" href="/hacktivities">
+<div class="dropdown-menu-icon">
+<i class="fas fa-book-open"></i>
+</div>
+<div class="dropdown-menu-desc">
+<span class="mb-0">Learn</span>
+<div class="text-lgray size-12">Hands-on Hacking</div>
+</div>
+</a>
+<a class="dropdown-item d-flex vertical-align-custom" href="/hacktivities?tab=practice">
+<div class="dropdown-menu-icon">
+<i class="fas fa-bullseye-arrow"></i>
+</div>
+<div class="dropdown-menu-desc">
+<span class="mb-0">Practice</span>
+<div class="text-lgray size-12">Reinforce your learning</div>
+</div>
+</a>
+<a class="dropdown-item d-flex vertical-align-custom" href="/hacktivities?tab=search&page=1&free=all&order=most-popular&difficulty=all&type=all ">
+<div class="dropdown-menu-icon">
+<i class="fas fa-search"></i>
+</div>
+<div class="dropdown-menu-desc">
+<span class="mb-0">Search</span>
+<div class="text-lgray size-12">Explore over 700 rooms</div>
+</div>
+</a>
+</div>
+</li>
+<li class="nav-item  dropdown lite-removable">
+<a id="nav-other" class="nav-link" href="#" data-toggle="dropdown">
+<i class="navbar-item-icon far fa-trophy"></i>
+<div class="navbar-item-text">Compete</div>
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown" id="compete">
+<a class="dropdown-item d-flex vertical-align-custom" href="/leaderboards">
+<div class="dropdown-menu-icon">
+<i class="fas fa-trophy"></i>
+</div>
+<div class="dropdown-menu-desc">
+<span class="mb-0">Leaderboards</span>
+<div class="text-lgray size-12">Platform Rankings</div>
+</div>
+</a>
+<a class="dropdown-item d-flex vertical-align-custom" href="/games/koth">
+<div class="dropdown-menu-icon">
+<i class="fas fa-crown"></i>
+</div>
+<div class="dropdown-menu-desc">
+<span class="mb-0">King of the Hill</span>
+<div class="text-lgray size-12">Attack & Defend</div>
+</div>
+</a>
+<a class="dropdown-item d-flex vertical-align-custom" href="/workspace">
+<div class="dropdown-menu-icon">
+<i class="fas fa-user-friends"></i>
+</div>
+<div class="dropdown-menu-desc">
+<span class="mb-0">Workspace</span>
+<div class="text-lgray size-12">Compete & Collaborate</div>
+</div>
+</a>
+</div>
+</li>
+<li id="nav-develop" class="nav-item dropdown lite-removable">
+<a class="nav-link" href="#" data-toggle="dropdown">
+<i class="navbar-item-icon fal fa-pencil-alt"></i>
+<div class="navbar-item-text">Develop</div>
+</a>
+<div class="dropdown-menu dropdown-menu-center large-dropdown" aria-labelledby="navbarDropdown">
+<span class="dropdown-menu-arrow"></span>
+<a class="dropdown-item d-flex vertical-align-custom" href="/upload">
+<div class="dropdown-menu-icon">
+<i class="fas fa-cloud-upload-alt"></i>
+</div>
+<div class="dropdown-menu-desc">
+<span class="mb-0">Upload</span>
+<div class="text-lgray size-12">Upload VMs & Files</div>
+</div>
+</a>
+<a class="dropdown-item d-flex vertical-align-custom" href="/manage-rooms">
+<div class="dropdown-menu-icon">
+<i class="fas fa-id-card"></i>
+</div>
+<div class="dropdown-menu-desc">
+<span class="mb-0">Manage rooms</span>
+<div class="text-lgray size-12">Create & Manage Rooms</div>
+</div>
+</a>
+<a class="dropdown-item d-flex vertical-align-custom" href="/your-material">
+<div class="dropdown-menu-icon">
+<i class="fas fa-file"></i>
+</div>
+<div class="dropdown-menu-desc">
+<span class="mb-0">Your material</span>
+<div class="text-lgray size-12">View your uploads</div>
+</div>
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a data-cy="nav-other-menu-button" id="nav-other" class="nav-link" href="#" data-toggle="dropdown">
+<i class="navbar-item-icon far fa-ellipsis-h-alt"></i>
+<div class="navbar-item-text">Other</div>
+</a>
+<div data-cy="nav-other-menu" class="dropdown-menu dropdown-menu-center large-dropdown" aria-labelledby="navbarDropdown">
+<span class="dropdown-menu-arrow"></span>
+<a class="dropdown-item" href="/resources">Resources</a>
+<a class="dropdown-item" href="/subscriptions">Buy Vouchers</a>
+<a class="dropdown-item" href="/develop-rooms">Develop Rooms</a>
+<a class="dropdown-item" href="/business">For Business</a>
+<a class="dropdown-item" href="/classrooms">For Education</a>
+<a class="dropdown-item" target="_blank" href="https://store.tryhackme.com/">Swag Shop</a>
+<a class="dropdown-item" href="/glossary">Glossary</a>
+</div>
+</li>
+</ul>
+<ul class="navbar-nav navbar-right options vertical-align-custom">
+<li class="nav-item" data-toggle="modal" data-target="#navConnModal">
+<div id="thm-connection-status" class="thm-unconnected">
+<div id="thm-connection-status-dot" class="dot-small"></div> <span id="thm-connection-status-txt" class="ml-2 size-18 text-white"></span>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link " href="/hacktivities?tab=search"> <i class="far fa-search"></i></a>
+</li>
+<li class="nav-item dropdown" id="notification-navitem">
+<a class="nav-link vertical-align-custom size-22 pl-0" href="#" id="notification-btn" role="button" data-toggle="dropdown">
+<i id="notification-icon" class="fal fa-bell"></i>
+<div id="notification-dot"></div>
+</a>
+<div id="nav-notification" class="dropdown-menu dropdown-menu-right">
+<div id="notification-header">Notifications</div>
+<div id="nav-notifications">
+<div class="text-center mt-2 mb-2"><i>Loading..</i></div>
+</div>
+</div>
+</li>
+<li class="nav-item">
+<a href="/why-subscribe" class="go-premium btn btn-hgreen-soft">Go Premium</a>
+</li>
+<li class="nav-item">
+<div class="nav-item-streak text-center">
+<span id="streak-popover" class="size-24" data-container="body" data-trigger="hover" data-toggle="popover" data-html="true" data-placement="bottom" data-content="<p class='mb-2'>Complete a question every day to build your hacking streak, earn badges and streak freezes!</p>
+
+<div class='size-12 faded'>
+  <p class='streak-points'><span class='streak-count'>7</span> <i class='fas fa-fire-alt hacker-green'></i> = Badge,
+    Access to networks, Streak freeze</p>
+  <p class='streak-points'><span class='streak-count'>30</span> <i class='fas fa-fire-alt hacker-green'></i> = Badge,
+    Streak freeze</p>
+  <p class='m-0'><span class='streak-count'>45</span> <i class='fas fa-fire-alt hacker-green'></i> = 5% off swag</p>
+</div>
+">
+<span id="user-streak" data-streak="0" class="hacker-green"></span>
+</span>
+<script>
+                            let usersStreak = { // Global variable, used in rooms logic
+                                streakFirstAnswered: new Date('Fri Dec 01 2023 17:29:10 GMT+0000 (Greenwich Mean Time)'),
+                                streakLastAnswered: new Date('Fri Dec 01 2023 17:44:43 GMT+0000 (Greenwich Mean Time)'),
+                                usersTimezone: 'Africa/Addis_Ababa',
+                                streakFreeze: 0
+                            };
+                            setSidebarStreaks(usersStreak.streakFirstAnswered, usersStreak.streakLastAnswered, usersStreak.usersTimezone, usersStreak.streakFreeze)
+                        </script>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle remove-arrow p-0" href="#" id="navbarAvatarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<img src="https://tryhackme-images.s3.amazonaws.com/user-avatars/f6650f44e8fa1c28b02f42db1b8790a6.jpg" onerror="setBrokenTmpPP(this)" class="rounded-circle navbar-user-avatar">
+</a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarAvatarDropdown">
+<a class="dropdown-item" href="/manage-account">Profile</a>
+<a class="dropdown-item" href="/referrals">Refer a friend</a>
+<a class="dropdown-item" href="/badges">Badges</a>
+<a class="dropdown-item" href="/rooms">My Rooms</a>
+<a class="dropdown-item" href="/access">Access</a>
+<a class="dropdown-item" href="/feedback">Give Feedback</a>
+<a class="dropdown-item" href="/logout">Logout</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<link rel="stylesheet" href="https://assets.tryhackme.com/css/streak-freeze.css" />
+<div class="modal fade modal-streak-freeze" id="unlocked-streak-freeze" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<button type="button" class="close close-streak" id="close-streak-freeze-popup" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+<div class="modal-body">
+<figure>
+<img class="img-streak" width="400px" alt="streak freeze unlocked" src="https://assets.tryhackme.com/img/svgs/streak-freeze.svg">
+</figure>
+<h2>You've unlocked a streak freeze!</h2>
+<p>With these one-time streak freezes, you can miss one day of hacking without losing your streak.</p>
+</div>
+</div>
+</div>
+</div>
+<script src="https://assets.tryhackme.com/js/streak-freeze.js"></script>
+<nav id="thm-mobile-nav-menu" class="thm-mobile-nav" aria-label="Mobile secondary navigation menu.">
+<header>
+<a href="/" aria-label="Go to the home page">
+<img width="140" src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" alt="TryHackMe" class="logo" />
+</a>
+<button id="thm-mobile-nav-close" data-target="#thm-mobile-nav-menu" aria-controls="thm-mobile-nav-menu" aria-expanded="false" aria-label="Close mobile navigation">
+<i class="fal fa-times"></i>
+</button>
+</header>
+<ul class="thm-mobile-nav-items mb-0">
+<li class="nav-item ">
+<a class="nav-link" href="/dashboard">
+<i class="nav-title-icon far fa-browser"></i>
+<div class="nav-title">Dashboard</div>
+</a>
+</li>
+<li class="nav-item active">
+<a class="nav-link" href="/hacktivities">
+<i class="nav-title-icon far fa-book-open"></i>
+<div class="nav-title">Learn</div>
+</a>
+</li>
+<li class="nav-item ">
+<a aria-expanded="false" aria-controls="mobile-nav-compete" aria-label="Toggle Compete menu" data-dropdownid="mobile-nav-compete" class="sublinks-toggle nav-link">
+<i class="nav-title-icon far fa-trophy"></i>
+<div class="nav-title">Compete</div>
+<i class="far fa-angle-down"></i>
+</a>
+<div id="mobile-nav-compete" class="dropdown-wrapper">
+<a href="/leaderboards">
+<div>
+<i class="fas fa-trophy"></i>
+</div>
+<div>
+<span class="mb-0">Leaderboards</span>
+<div class="text-lgray size-12">Platform Rankings</div>
+</div>
+</a>
+<a href="/games/koth">
+<div>
+<i class="fas fa-crown"></i>
+</div>
+<div>
+<span class="mb-0">King of the Hill</span>
+<div class="text-lgray size-12">Attack & Defend</div>
+</div>
+</a>
+<a href="/workspace">
+<div>
+<i class="fas fa-user-friends"></i>
+</div>
+<div>
+<span class="mb-0">Workspace</span>
+<div class="text-lgray size-12">Compete & Collaborate</div>
+</div>
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a aria-expanded="false" aria-controls="mobile-nav-develop" aria-label="Toggle Compete menu" data-dropdownid="mobile-nav-develop" class="sublinks-toggle nav-link">
+<i class="nav-title-icon fal fa-pencil-alt"></i>
+<div class="nav-title">Develop</div>
+<i class="far fa-angle-down"></i>
+</a>
+<div id="mobile-nav-develop" class="dropdown-wrapper">
+<a href="/upload">
+<div>
+<i class="fas fa-cloud-upload-alt"></i>
+</div>
+<div>
+<span class="mb-0">Upload</span>
+<div class="text-lgray size-12">Upload VMs & Files</div>
+</div>
+</a>
+<a href="/manage-rooms">
+<div>
+<i class="fas fa-id-card"></i>
+</div>
+<div>
+<span class="mb-0">Manage rooms</span>
+<div class="text-lgray size-12">Create & Manage Rooms</div>
+</div>
+</a>
+<a href="/your-material">
+<div>
+<i class="fas fa-file"></i>
+</div>
+<div>
+<span class="mb-0">Your material</span>
+<div class="text-lgray size-12">View your uploads</div>
+</div>
+</a>
+</div>
+</li>
+<li class="nav-item">
+<a aria-expanded="false" aria-controls="mobile-nav-other" aria-label="Toggle Compete menu" data-dropdownid="mobile-nav-other" class="sublinks-toggle nav-link">
+<i class="nav-title-icon far fa-ellipsis-h-alt"></i>
+<div class="nav-title">Other</div>
+<i class="far fa-angle-down"></i>
+</a>
+<div id="mobile-nav-other" class="dropdown-wrapper">
+<a href="/resources">Resources</a>
+<a href="/subscriptions">Buy Vouchers</a>
+<a href="/develop-rooms">Develop Rooms</a>
+<a href="/business">For Business</a>
+<a href="/classrooms">For Education</a>
+<a target="_blank" href="https://store.tryhackme.com/">Swag Shop</a>
+</div>
+</li>
+<li class="nav-item text-center">
+<a class="nav-link size-22 d-inline-block" href="/hacktivities?tab=search"> <i class="far fa-search"></i></a>
+</li>
+<li class="nav-item text-center">
+<a class="nav-link size-22 d-inline-block" href="#" id="mobile-notification-btn" role="button" data-toggle="dropdown">
+<i id="mobile-notification-icon" class="fal fa-bell"></i>
+<div id="mobile-notification-dot"></div>
+</a>
+<div id="mobile-nav-notification" class="dropdown-menu dropdown-menu-right">
+<div id="mobile-notification-header">Notifications</div>
+<div id="mobile-nav-notifications">
+<div class="text-center mt-2 mb-2"><i>Loading..</i></div>
+</div>
+</div>
+</li>
+<li class="nav-item text-center">
+<a href="/why-subscribe"><button type="button" class="btn btn-hgreen-soft">Go Premium</button></a>
+</li>
+<li class="nav-item text-center">
+<div class="nav-item-streak">
+<span id="mobile-streak-popover" class="size-24" data-container="body" data-trigger="hover" data-toggle="popover" data-html="true" data-placement="bottom" data-content="<p class='mb-2'>Complete a question every day to build your hacking streak, earn badges and streak freezes!</p>
+
+<div class='size-12 faded'>
+  <p class='streak-points'><span class='streak-count'>7</span> <i class='fas fa-fire-alt hacker-green'></i> = Badge,
+    Access to networks, Streak freeze</p>
+  <p class='streak-points'><span class='streak-count'>30</span> <i class='fas fa-fire-alt hacker-green'></i> = Badge,
+    Streak freeze</p>
+  <p class='m-0'><span class='streak-count'>45</span> <i class='fas fa-fire-alt hacker-green'></i> = 5% off swag</p>
+</div>
+">
+<span id="mobile-user-streak" data-streak="0" class="hacker-green"></span>
+</span>
+</div>
+</li>
+<li class="nav-item text-center">
+<a aria-expanded="false" aria-controls="mobile-nav-auth" aria-label="Toggle Compete menu" data-dropdownid="mobile-nav-auth" class="sublinks-toggle nav-link d-inline-block">
+<img src="https://tryhackme-images.s3.amazonaws.com/user-avatars/f6650f44e8fa1c28b02f42db1b8790a6.jpg" onerror="setBrokenTmpPP(this)" class="rounded-circle navbar-user-avatar" />
+</a>
+<div id="mobile-nav-auth" class="dropdown-wrapper">
+<a href="/manage-account">Profile</a>
+<a href="/referrals">Refer a friend</a>
+<a href="/badges">Badges</a>
+<a href="/rooms">My Rooms</a>
+<a href="/access">Access</a>
+<a href="/feedback">Give Feedback</a>
+<a href="/logout">Logout</a>
+</div>
+</li>
+</ul>
+</nav>
+<script defer src="https://assets.tryhackme.com/js/mobile-nav.js"></script>
+<script>
+  const ctfBuilderEnabled = true;
+  const isAdmin = false;
+  const isB2BUser = false;
+
+  if (ctfBuilderEnabled && (isB2BUser || isAdmin)) {
+    const anchor = `
+      <a class="dropdown-item d-flex vertical-align-custom" href="/r/ctf-builder">
+        <div class='dropdown-menu-icon'>
+          <i class="fas fa-flag"></i>
+        </div>
+        <div class='dropdown-menu-desc'>
+          <span class='mb-0'>CTF Builder</span>
+          <div class='text-lgray size-12'>Create your own CTF</div>
+        </div>
+      </a>`;
+    document.querySelector('#compete').insertAdjacentHTML('beforeend', anchor);
+  }
+
+  const userSignedUpLessThanSevenDaysAgo = Math.floor(
+    (new Date() - new Date('Tue Jan 31 2023 19:08:46 GMT+0000 (Greenwich Mean Time)')) / (1000 * 60 * 60 * 24) < 7
+  );
+
+  const userHasFirst4RoomsBadge = !!`{
+  _id: new ObjectId("63da2462a87f960049386e21"),
+  name: 'first-4-rooms',
+  image: 'ad51129c2f214cc321af818aad648a6c.png'
+}`;
+  const isBeginner = `intermediate` === 'complete-beginner';
+</script>
+<script src="https://assets.tryhackme.com/js/utils/notifications.js?v=1.5"></script>
+<script src="https://assets.tryhackme.com/js/utils/streak-freeze.js?v=1"></script>
+<div id="wrapper">
+<div id="room-banner" class="shadow-light">
+<img id="room-image-large" src="https://tryhackme-images.s3.amazonaws.com/user-uploads/62c435d1f4d84a005f5df811/room-content/1eb7b51908dee3e6a463ed1b4158f55d.svg">
+<div>
+<div id="room-details">
+<div class="container">
+<div class="page-header">
+<div class="room-header">
+<div id="room-voting" class="text-center vertical-align-custom">
+<div class="voting-buttons">
+<i class="fas fa-thumbs-up display-block" onclick="makeVote(true)" id="vote-up"></i>
+<div class="display-block" id="vote-number">0</div>
+<i class="fas fa-thumbs-down display-block" onclick="makeVote(false)" id="vote-down"></i>
+</div>
+</div>
+<div id="room-logo" class="vertical-align-custom">
+<div id="logo"><i>Loading...</i></div>
+</div>
+<div class="vertical-align-custom">
+<div id="room-basic-data">
+<div class="d-flex justify-content-between">
+<h1 id="title" class="bold-head"><i>Loading...</i></h1>
+<div id="room-title-options">
+
+<div class="btn-group" id="browser-machine-options" role="group" aria-label="Start AttackBox or Kali Linux">
+<button id="browser-machine-start" type="button" class="btn btn-secondary"><i class="far fa-laptop"></i> Start AttackBox</button>
+<div class="btn-group" id="browser-machines" role="group">
+<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+<a class="dropdown-item  preventDefault" href="#" onclick="changeMyMachine(&quot;kali-linux&quot;)">
+<span class="mb-0">Use Kali Linux</span>
+<div class="text-lgray size-12">Web-based Kali Machine</div>
+</a>
+<a class="dropdown-item preventDefault" href="#" onclick="changeMyMachine(&quot;attackbox&quot;)">
+<span class="mb-0">Use AttackBox</span>
+<div class="text-lgray size-12">Recommended</div>
+</a>
+</div>
+</div>
+</div>
+<button id="browser-machine-split-view" type="button" class="btn btn-secondary">Show Split View</button>
+<button id="cloud-details" type="button" class="btn btn-info"><i class="far fa-clouds mr-1"></i>Cloud Details</button>
+<span id="awards-model-btn" data-toggle="modal" data-target="#award-modal" class="badge badge-warning ml-1 noselect">Awards</span>
+<span id="room-faq-slideout" type="button" class="badge badge-info ml-1 noselect d-inline-flex" onclick="openHelpMenu()">
+Help
+</span>
+<div class="dropright room-dropright noselect ml-1" id="room-options">
+<span class="badge badge-secondary" data-toggle="dropdown">
+<i class="fas fa-cog"></i>
+</span>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="/api/room/manage/clone/adventofcyber2023" id="clone-room"><i class="far fa-clone faded"></i> Clone Room</a>
+<a class="dropdown-item preventDefault" id="writeups-simple"><i class="fas fa-pen-alt faded"></i> Writeups</a>
+<a class="dropdown-item preventDefault" data-toggle="modal" data-target="#resetUserProgressModal"><i class="fas fa-eraser faded"></i> Reset Progress</a>
+<a class="dropdown-item preventDefault" id="leave-room"><i class="fas fa-sign-out-alt faded"></i> Leave</a>
+</div>
+</div>
+<span id="bookmark" class="badge badge-secondary badge-bookmark ">
+<img class="bookmark" src="/img/svgs/bookmark.svg">
+<span class="bookmark-popover" class="size-24" data-container="body" data-trigger="hover" data-toggle="popover" data-html="true" data-placement="top" data-content="<p class='mb-0'>Save room </p>
+">
+</span>
+</span>
+</div>
+</div>
+<p class="mb0 faded" id="description"><i>Loading...</i></p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div id="room-banner-stats">
+<div class="creators"></div>
+<div class="numbers"></div>
+</div>
+</div>
+</div>
+<div class="container main pb">
+<div id="room-message"></div>
+<section id="sponsor">
+<i id="sponsor-close" class="fas fa-times"></i>
+<div id="sponsor-data"></div>
+</section>
+<div id="top-panel">
+<ul class="nav nav-tabs" id="task-navs">
+<li class="nav-item">
+<a class="nav-link  active " data-toggle="tab" href="#chart">
+<i class="fas fa-chart-line icon-right"></i> Chart
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#scoreboard">
+<i class="fas fa-trophy icon-right"></i> Scoreboard
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#video">
+<i class="fas fa-play icon-right"></i> Video
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#chat">
+<i class="fas fa-comments-alt icon-right chat-icon"></i> Discuss
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#writeups">
+<i class="fas fa-pen-alt icon-right"></i> Writeups
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#about">
+<i class="fas fa-info-circle icon-right"></i> More
+</a>
+</li>
+</ul>
+<div class="card cd-2 nav-above-con" id="room-main">
+<div class="card-body">
+<span id="room-tabs">
+<div class="tab-content">
+<div id="chart" class="tab-pane  active ">
+<span id="difficulty-bar"></span>
+<br><div id="chart-data"></div>
+</div>
+<div id="scoreboard" class="tab-pane fade">
+<table class="table table-striped table-bordered table-condensed table-header-rotated mb-0" id="scoreboard_table">
+<thead>
+<tr id="scoreboard_header">
+<th>Rank</th>
+<th>Username</th>
+<th>Total Score</th>
+</tr>
+</thead>
+<tbody id="scoreboard_body"></tbody>
+</table>
+</div>
+<div id="video" class="tab-pane fade">
+<link href="https://vjs.zencdn.net/7.6.0/video-js.css" rel="stylesheet">
+<link href="https://assets.tryhackme.com/css/libs/videojs.markers.css" rel="stylesheet">
+<section id="room-video"></section>
+<script src="https://vjs.zencdn.net/7.6.0/video.js"></script>
+<script src="https://assets.tryhackme.com/js/libs/videojs-markers.js"></script>
+</div>
+<div id="chat" class="tab-pane fade">
+
+<div class="row mb-0">
+<div class="col-sm-12 text-center">
+<h3 class="mb-2">Discord</h3>
+<p class="mb-0">Come join our <a target="_blank" href="https://discord.gg/QgC6Tdk">Discord</a> server for support or further discussions</p>
+</div>
+
+</div>
+</div>
+<div id="writeups" class="tab-pane text-center">
+<div id="writeups-data"><i>Loading...</i></div>
+<button onclick="showWriteupForm(this)" type="button" class="btn btn-xs btn-secondary mt-3 mb-2">Add Writeup</button>
+<div id="writeup-form">
+<div class="form-row">
+<div class="col-auto">
+<input type="text" class="form-control mb-2" id="writeup-title" placeholder="Writeup Title">
+</div>
+<div class="col-auto">
+<input type="text" class="form-control mb-2" id="writeup-link" placeholder="Writeup URL">
+</div>
+<div class="col-auto">
+<button id="submit-writeup" type="submit" class="btn btn-success mb-2">Submit</button>
+</div>
+</div>
+<p class="faded mb-0 size-14"><i class="fas fa-exclamation-triangle text-warning"></i> Writeups should have a link to TryHackMe and not include any passwords/cracked hashes/flags</p>
+</div>
+</div>
+<div id="about" class="tab-pane text-center">
+<p id="about-freeRoom"></p>
+<p class="mb-0" id="about-owner"></p>
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+<div id="room-simple-video" class="card card-body cd-2"></div>
+<div class="card mt-3 mb-3 cd-2 text-center" id="instance-info">
+<div class="card-header card-header-red">Active Machine Information</div>
+<div class="card-body">
+<div class="row vertical-align-custom">
+<div class="col-sm-3">
+<i>Loading...</i>
+</div>
+<div class="col-sm-3" id="table-machine-ip">
+<i>Loading...</i>
+</div>
+<div class="col-sm-3">
+<i>Loading...</i>
+</div>
+<div class="col-sm-3">
+<i>Loading...</i>
+</div>
+</div>
+</div>
+</div>
+<div id="task-list">
+<div id="room-task-detail" class="mb-3"><span id="progress-bar"></span></div>
+<div id="taskContent">
+<img width="30" src="https://assets.tryhackme.com/img/loading.gif"><i class="ml">Loading Tasks...</i>
+</div>
+</div>
+<div id="room-simple-details"></div>
+</body></html>
+</div>
+</div>
+</div>
+<div id="room-content-attackbox">
+<div id="room-attackbox">
+<div id="attackbox-machine-instance">
+<div id="room-attackbox-loading"></div>
+<div id="room-attackbox-vm-view"></div>
+</div>
+<div id="attackbox-machine-options">
+<div class="d-flex">
+<a target="_blank" id="room-attackbox-url" data-toggle="tooltip" data-placement="top" title="View in full screen" data-container="#room-content"></a>
+<div onclick="extendHourWebBasedVM(null)" class="hover-pointer" id="room-attackbox-extend" data-toggle="tooltip" data-placement="top" title="Extend machines timer" data-container="#room-content"><i class="fas fa-plus"></i></div>
+<div onclick="terminateWebBasedVM(null)" class="hover-pointer" id="room-attackbox-terminate" data-toggle="tooltip" data-placement="top" title="Terminate Machine" data-container="#room-content"><i class="far fa-power-off"></i></div>
+<div onclick="exitViewAttackBox()" class="hover-pointer" id="room-attackbox-exitview" data-toggle="tooltip" data-placement="top" title="Exit split view" data-container="#room-content"><i class="fas fa-minus"></i></div>
+<div onclick="infoAttackBox()" class="hover-pointer faded" id="room-attackbox-info" data-toggle="tooltip" data-placement="top" title="Machine Information" data-container="#room-content"><i class="fas fa-info"></i></div>
+<div class="d-flex" id="room-attackbox-tabs"></div>
+</div>
+<div id="room-attackbox-expire-text" data-toggle="tooltip" data-placement="top" title="Time left until your AttackBox expires" data-container="#room-content"></div>
+</div>
+</div>
+<div class="modal fade" id="attackBoxInfoModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header modal-light-gray">
+<h5 class="modal-title m-auto">Web-Based Machine Information</h5>
+</div>
+<div class="modal-body">
+<p>Use the web-based machine to attack other target machines you start on TryHackMe.</p>
+<ul class="normalList text-gray mt-3 mb-4">
+<li>Public IP: <code id="browser-machine-pubip" class="dark size-14"></code></li>
+<li class="mt-1">Private IP: <code id="browser-machine-privip" class="dark size-14"></code> <span class="size-14">(Use this for your reverse shells)</span></li>
+<li class="mt-1">Username: <code id="browser-username" class="dark size-14"></code></li>
+<li class="mt-1">Password: <code id="browser-password" class="dark size-14"></code></li>
+<li class="mt-1">Protocol: <code id="browser-protocol" class="dark size-14"></code></li>
+</ul>
+<hr class="hr-min">
+<ul class="text-lgray mb-0">
+<li class="mt-2">To copy to and from the browser-based machine, highlight the text and press <b>CTRL+SHIFT+C</b> <details><summary>or use the clipboard</summary><img src="/img/tutorials/clipboard.gif"></details></li>
+<li class="mt-2">When accessing target machines you start on TryHackMe tasks, make sure you're using the correct IP (it <b>should not be</b> the IP of your AttackBox)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="award-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body text-center">
+<button type="button" class="close size-30 text-lgray" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+<div id="award-modal-badges"></div>
+<p class="mb-0 text-lgray size-18">Complete the room to earn this badge</p>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="hint-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header modal-dark-blue">
+<h5 class="modal-title"><i class="fal fa-lightbulb-on"></i> Question Hint</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body"></div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">...</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body text-center"></div>
+<div class="modal-footer"></div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="https://assets.tryhackme.com/css/modal.css?v=0.3">
+<div class="modal-design-green modal fade" id="roomCompleted" tabindex="-1" role="dialog" data-backdrop="static" aria-hidden="true">
+<div id="modal-dialog-container" class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content" id="roomCompletedModalContent">
+<div class="modal-body text-center">
+<button type="button" class="close" id="closeRoomComplete" aria-label="Close">
+<i class="fad fa-times-circle"></i>
+</button>
+<div class="icon-box">
+<i class="fad fa-badge-check"></i>
+</div>
+<h3 class="text-accent mt-5">Congratulations</h3>
+<p id="congratulations-message" class="faded mt-1">You've completed the room! Share this with your friends: </p>
+<style>
+  #first-four-rooms-badge-promo-container {
+    border-radius: 8px;
+    border: 1px solid #DDDCE0;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: start;
+    margin: 24px 0 4px;
+  }
+
+  #first-four-rooms-badge {
+    max-height: 100px;
+  }
+
+  .first-four-room-progress-bar {
+    height: 9px;
+    border-radius: 4px;
+  }
+
+  #share-with-your-friends {
+    margin: 12px 0 16px;
+    color: #5B5F60;
+  }
+
+  #first-four-progress {
+    width: 0px;
+  }
+</style>
+<div id="first-four-rooms-container" class="d-none">
+<div id="first-four-rooms-badge-promo-container">
+<img id="first-four-rooms-badge" src="/img/badges/firstfour.svg" alt="First 4 rooms badge" />
+<div class="d-flex flex-column">
+<h4 class="size-20 m-0">Earn the First Four badge</h4>
+<p class="size-14 m-0">Complete four rooms in your first week to earn the First Four badge</p>
+<div class="d-flex justify-content-between size-12" style="margin: 8px 0 8px">
+<p id="first-four-rooms-completion-percentage" class="m-0"></p>
+<p id="first-four-rooms-days-remaining" class="m-0"></p>
+</div>
+<div class="progress w-100 first-four-room-progress-bar"><div id="first-four-progress" class="progress-bar first-four-room-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+</div>
+</div>
+<div id="share-with-your-friends" class="size-14">
+Share with your friends
+</div>
+</div>
+<h2 id="roomCompleted-share"></h2>
+<div id="ticket-info"></div> 
+<p class="faded mt-1" id="roomFeedbackBtn">
+<small>
+<button class="bg-white border-0">Leave
+feedback</button>
+</small>
+</p>
+<form method="post" action="/feedback" id="roomFeedbackForm" class="d-none mt-3">
+<input type="hidden" name="_csrf" value="JjLa52Gv-0AMj9sVXaby8bsixYyTjhdZCs9I">
+<input type="hidden" name="roomCode" value="adventofcyber2023">
+<input type="hidden" name="type" value="rooms">
+<input type="hidden" name="redirect" value="json">
+<div class="form-group">
+<label class="mb-0" for="like">What do you like about the room?</label>
+<textarea type="text" name="like" id="like" class="form-control"></textarea>
+</div>
+<div class="form-group">
+<label class="mb-0" for="dislike">What don't you like about the room?</label>
+<textarea type="text" name="dislike" id="dislike" class="form-control"></textarea>
+</div>
+<div class="form-group">
+<label class="mb-0" for="details">Please send your suggestions, ideas and comments!</label>
+<textarea id="details" type="text" name="details" class="form-control" style="padding: 5px;"></textarea>
+</div>
+<button type="submit" id="submitBtn" class="btn btn-success">Send Feedback</button>
+</form>
+<p class="mt-2 mb-0" id="formMessage"></p>
+</div>
+</div>
+</div>
+<script>
+    function dismissRoomCompleteModal() {
+      $('#roomCompleted').modal('hide');
+
+      const shouldSeeReferralModal = ""
+      if (shouldSeeReferralModal) {
+        $('#unlockCreditModal').modal('show');
+
+        referralModalEvent('view');
+      }
+    }
+
+    document.getElementById('closeRoomComplete').addEventListener('click', dismissRoomCompleteModal)
+  </script>
+</div>
+<script src="https://assets.tryhackme.com/js/rooms/public/roomFeedback.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const closeRoomCompleteModal = document.getElementById("closeRoomComplete");
+    if (closeRoomCompleteModal) {
+      closeRoomCompleteModal.addEventListener("click", function(event) {
+        closeCompletionPopupEvent('click');
+        });
+    }
+  });
+</script>
+<div class="modal fade" id="roomStartAttackboxModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header modal-dark-blue">
+<h5 class="modal-title m-auto">To access this machine, you need to either</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 10px; top: 0; font-size: 30px;">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body text-center">
+<div class="row vertical-align-custom mb-0">
+<div class="col-sm-5 pr-0">
+<p class="size-18 bold">Use a VPN</p>
+<p>Connect to our network via a VPN</p>
+<a target="_blank" href="/access"><button type="button" class="btn btn-light">See Instructions</button></a>
+</div>
+<div class="col-sm-2 size-24">
+or
+</div>
+<div class="col-sm-5 pl-0">
+<p class="size-18 bold">Use the AttackBox</p>
+<p>Use a web-based attack machine <span class="size-12">(recommended)</span></p>
+<button type="button" onclick="$('#roomStartAttackboxModal').modal('toggle'); startAttackBox({startingMsg: false, tutorial: true})" class="btn btn-hgreen">Start AttackBox</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-design-green modal fade" id="expireSoon" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+<div class="modal-content">
+<div class="modal-body text-center">
+<h1><i class="text-warning fad fa-exclamation-triangle"></i></h1>
+<h3 class="text-warning">Expiring Soon</h3>
+<p class="faded mt-3 mb-0">Your machine is going to expire soon. Close this and add an hour to stop it from terminating!</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-design-green modal fade" id="terminatedMachine" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+<div class="modal-content">
+<div class="modal-body text-center">
+<h1><i class="text-danger fad fa-exclamation-triangle"></i></h1>
+<h3 class="text-danger">Expired Machine</h3>
+<p class="faded mt-3 mb-0">Your machine has expired and terminated.</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-design-green modal fade" id="machineDeployModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header modal-dark-blue text-center p-3">
+<h4 class="mb-0 m-auto">How to access machines</h4>
+<button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+</div>
+<div class="modal-body text-center">
+<p class="size-18 faded">Now you've started your machine, to access it you need to either</p>
+<div class="row mb-0">
+<div class="col-sm-6">
+<img src="/img/connect/connect_openvpn_short.png">
+<p class="mt-2 mb-0 faded">Download your VPN configuration file and import it into a OpenVPN client</p>
+</div>
+<div class="col-sm-6">
+<img src="/img/connect/connect_kali_short.png">
+<p class="mt-2 mb-0 faded">Control a web-based machine with everything you need, all from inside your browser</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="roomAlertModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header modal-dark-blue">
+<h5 class="modal-title" id="roomAlertModalTitle"></h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body" id="roomAlertModalBody"></div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="resetUserProgressModal" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Reset Your Progress</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<div><span class="text-danger"><i class="fas fa-exclamation-triangle"></i> Warning</span> You will keep your points but all your answers in this room will be erased.</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-danger" onClick="resetProgress()">Yes, please!</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="cloudEnvInfoModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header  modal-dark-blue">
+<h5 class="modal-title">Cloud Information</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs">
+<li class="nav-item pr-2">
+<a class="nav-link active" data-toggle="tab" href="#env-tab">Environment</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#creds-tab">Credentials</a>
+</li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="env-tab"></div>
+<div class="tab-pane" id="creds-tab"></div>
+</div>
+</div>
+<div class="modal-footer" id="cloudEnvModalFooter">
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="setNameModal" role="dialog">
+<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header modal-dark-blue">
+<h5 class="modal-title">Generating Your Certificate</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body container">
+<div class="row">
+<div class="col-6">
+<h5 class="bold">Hey there, what's your name?</h5>
+<p class="text-secondary">
+If you want your name to appear on your certificate, please fill the field below.
+</p>
+<div class="form-group">
+<label>Full Name </label>
+<input id="modal-cert-field-name" type="text" placeholder="John Wick" class="mb-4 form-control" />
+<input id="modal-cert-field-email" type="hidden" value="samitesfaye726@gmail.com" />
+</div>
+</div>
+<div class="col-6">
+<h5 class="bold">You're here incognito? It's ok!</h5>
+<p class="text-secondary">If you chose skip, your username will be used instead!</p>
+</div>
+</div>
+<div class="row">
+<div class="col-6">
+<button type="button" class="btn btn-success float-right" id="modal-cert-generate" onclick="gen_cert(true)" disabled>
+Generate with my full name
+</button>
+</div>
+<div class="col-6">
+<button type="button" class="btn btn-primary float-right" id="modal-cert-skip" onclick="gen_cert(false)">
+Generate with my username
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://assets.tryhackme.com/js/assets/modals/certificateName.js"></script>
+<div class="modal fade slideout-faq" id="roomSlideoutUnstuck" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-dialog-slideout" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<div id="slideout-links">
+<div id="unstuck-video" class="unstuck-group">
+<div class="unstuck-icon"><i class="fas fa-play"></i></div>
+<div class="unstuck-icon-text">Video Solution</div>
+</div>
+<div id="unstuck-writeups" class="unstuck-group">
+<div class="unstuck-icon"><i class="fas fa-pen-alt"></i></div>
+<div class="unstuck-icon-text">Writeups</div>
+</div>
+<a id="unstuck-forum" target="_blank" class="clear-link unstuck-group">
+<div class="unstuck-icon"><i class="fas fa-comments-alt"></i></div>
+<div class="unstuck-icon-text">Forum Post</div>
+</a>
+<a href="https://help.tryhackme.com/en/collections/3601905-getting-started-with-tryhackme" target="_blank" class="clear-link unstuck-group">
+<div class="unstuck-icon"><i class="fas fa-books"></i></div>
+<div class="unstuck-icon-text">Knowledge Base</div>
+</a>
+<a href="https://discord.gg/DpBZz8y" target="_blank" class="clear-link unstuck-group">
+<div class="unstuck-icon"><i class="fas fa-users"></i></div>
+<div class="unstuck-icon-text">Ask Community</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<style>
+
+    #navConnModal .modal-body{
+        position: relative;
+    }
+
+    #nav-openvpn,
+    #nav-attackbox {
+        display: none;
+    }
+
+    #nav-openvpn .nav-pills .nav-link.active,
+    #nav-openvpn .nav-pills .show>.nav-link {
+        background-color: #ec8e3d;
+        color: white;
+    }
+    #nav-openvpn .nav-link {
+        color: #909090;
+    }
+    #nav-openvpn a,
+    #nav-attackbox a {
+        color: #ec8e3d;
+    }
+
+    #nav-openvpn code.dark {
+        background-color: #7d400a;
+        color: #fff;
+    }
+
+    #slideout-bk {
+        display: none;
+        padding: 10px 15px;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    #slideout-bk:hover {
+        opacity: 1;
+    }
+
+    #slideout-conn-hideip {
+        display: none;
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    #slideout-conn-hideip:hover {
+        opacity: 1;
+    }
+
+</style>
+<div class="modal fade slideout-faq" id="navConnModal" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-dialog-slideout" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<div id="slideout-bk" class="noselect" onclick="showSlideoutConnOptions()"><i class="far fa-arrow-left mr-2"></i> Show Connection Options</div>
+<div id="slideout-conn-options">
+<div id="slideout-conn-header" class="text-center">
+<img class="slideout-connect-img" src="https://tryhackme.com/img/illustrations/tryhackme_connect.png">
+<div id="slideout-conn-status" class="size-22"></div>
+</div>
+<div class="m-3 text-center">
+<p>To access target machines you need to either:</p>
+<div class="row mb-3 faq-quicklinks text-left vertical-align-custom">
+<div class="col-md-12 mb-3">
+<a class="clear-link preventDefault" href="#" onclick="showAttackBoxSteps()">
+<div class="card card-body">
+<div class="row vertical-align-custom">
+<div class="col col-2 text-center faq-quicklinks-icons">
+<i class="far fa-laptop"></i>
+</div>
+<div class="col">
+<div class="faq-quicklinks-title size-18">AttackBox</div>
+<p class="faded mb-0">Use a browser-based attack machine</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="col-md-12">
+<a class="clear-link preventDefault" href="#" onclick="showVPNSteps()">
+<div class="card card-body">
+<div class="row vertical-align-custom">
+<div class="col col-2 text-center faq-quicklinks-icons">
+<i class="far fa-key"></i>
+</div>
+<div class="col">
+<div class="faq-quicklinks-title size-18">OpenVPN</div>
+<p class="faded mb-0">Connect to our network via a VPN</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div id="faqCards" class="p-3">
+<div id="nav-openvpn">
+<div class="mb-3">
+<a target="_blank" href="/access"><i>View the dedicated OpenVPN access page for more information</i></a>
+</div>
+<div class="text-center">
+<style>
+  .download-ovpn-config-btn {
+    display: inline; 
+    color:#EC8E3D;
+    padding: 0;
+    margin-bottom: 4px;
+  }
+
+  .download-ovpn-config-btn:disabled {
+    color:#EC8E3D;
+  }
+
+  .download-ovpn-config-btn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color:#EC8E3D;
+  }
+
+</style>
+<h4>What Operating System are you using?</h4>
+<ul class="nav nav-pills mb-3 text-center" id="vpn-guide" style="display: flex; justify-content: center;">
+<li class="nav-item m-3">
+<a class="nav-link" data-toggle="pill" href="#pills-windows" role="tab" aria-controls="pills-windows" aria-selected="true"><i class="fab fa-windows mr-2"></i> Windows</a>
+</li>
+<li class="nav-item m-3">
+<a class="nav-link active" data-toggle="pill" href="#pills-linux" role="tab" aria-controls="pills-linux" aria-selected="false"><i class="fab fa-linux mr-2"></i> Linux</a>
+</li>
+<li class="nav-item m-3">
+<a class="nav-link" data-toggle="pill" href="#pills-macos" role="tab" aria-controls="pills-macos" aria-selected="false"><i class="fab fa-apple mr-2"></i> MacOS</a>
+</li>
+</ul>
+<div class="tab-content text-left">
+<div class="tab-pane fade" id="pills-windows" role="tabpanel">
+<ol>
+<li><button onclick="downloadOVPNConfig()" class="btn btn-link download-ovpn-config-btn" id="download-ovpn-config-button-windows">Download</button> your OpenVPN configuration pack.</li>
+<li class="mt-2"><a target="_blank" href="https://openvpn.net/client-connect-vpn-for-windows/">Download</a> the OpenVPN GUI application.</li>
+<li class="mt-2">Install the OpenVPN GUI application. Then open the installer file and follow the setup wizard.</li>
+<li class="mt-2">Open and run the OpenVPN GUI application as Administrator.</br><img class="mt-2 mb-3" src="https://assets.tryhackme.com/img/connect/win_ran_admin.png"></li>
+<li class="mt-2">The application will start running in the system tray. It's at the bottom of your screen, near the clock. Right click on the application and click <b>Import File</b>. </br><img class="mt-2 mb-3" src="https://assets.tryhackme.com/img/connect/win_import.png"></li>
+<li class="mt-2">Select the configuration file you downloaded earlier.</li>
+<li class="mt-2">Now right click on the application again, select your file and click Connect </br><img class="mt-2 mb-3" src="https://assets.tryhackme.com/img/connect/win_connect.png"></li>
+</ol>
+</div>
+<div class="tab-pane fade show active" id="pills-linux" role="tabpanel">
+<ol>
+<li><button onclick="downloadOVPNConfig()" class="btn btn-link download-ovpn-config-btn" id="download-ovpn-config-button-linux">Download</button> your OpenVPN configuration pack.</li>
+<li class="mt-2">Run the following command in your terminal: <code class="dark">sudo apt install openvpn</code></li>
+<li class="mt-2">Locate the full path to your VPN configuration file (normally in your ~/Downloads folder).</li>
+<li class="mt-2">Use your OpenVPN file with the following command: <code class="dark">sudo openvpn /path/to/file.ovpn</code></li>
+</ol>
+</div>
+<div class="tab-pane fade" id="pills-macos" role="tabpanel">
+<ol>
+<li><button onclick="downloadOVPNConfig()" class="btn btn-link download-ovpn-config-btn" id="download-ovpn-config-button-macos">Download</button> your OpenVPN configuration pack.</li>
+<li class="mt-2"><a href="https://openvpn.net/downloads/openvpn-connect-v2-macos.dmg">Download</a> OpenVPN for MacOS.</li>
+<li class="mt-2">Install the OpenVPN GUI application, by opening the dmg file and following the setup wizard.</br><img width="250" class="mt-2 mb-3" src="https://assets.tryhackme.com/img/connect/mac_installer.png"></li>
+<li class="mt-2">Open and run the OpenVPN GUI application.</li>
+<li class="mt-2">The application will start running and appear in your top bar. Right click on the application and click <b>Import File -> Local file</b>.</br><img class="mt-2 mb-3" src="https://assets.tryhackme.com/img/connect/mac_import.png"></li>
+<li class="mt-2">Select the configuration file you downloaded earlier.</li>
+<li class="mt-2">Right click on the application again, select your file and click connect.</br><img class="mt-2 mb-3" src="https://assets.tryhackme.com/img/connect/mac_connect.png"></li>
+</ol>
+</div>
+</div>
+<section class="text-left">
+<a class="remove-underline" data-toggle="collapse" href="#havingProblems" role="button" aria-expanded="false" aria-controls="havingProblems">
+<h5 class="mb-0 text-openvpn">Having Problems?</h5>
+</a>
+<div class="collapse" id="havingProblems">
+<ul class="mt-2 mb-0">
+<li>If you can access <a target="_blank" href="http://10.10.10.10">10.10.10.10</a>, you're connected.</li>
+<li>Downloading and getting a 404? Go the <a href="/access">access</a> page and switch VPN servers.</li>
+<li>Getting inline cert error? Go the <a href="/access">access</a> page and switch VPN servers.</li>
+<li>If you are using a virtual machine, you will need to run the VPN inside that machine.</li>
+<li>Is the OpenVPN client running as root? <span class="size-14 faded">(On Windows, run OpenVPN GUI as administrator. On Linux, run with sudo)</span></li>
+<li>Have you restarted your VM?</li>
+<li>Is your OpenVPN up-to-date?</li>
+<li>Only 1 OpenVPN connection is allowed. <span class="size-14 faded">(Run <code class="dark">ps aux | grep openvpn</code> - are there 2 VPN sessions running?)</span></li>
+<li>Still having issues? Check our <a href="https://help.tryhackme.com/en/articles/6496029-openvpn-general-troubleshooting-detailed/">docs</a> out.</li>
+</ul>
+</div>
+</section>
+<script>
+
+      async function downloadOVPNConfigFile () {
+        const response = await fetch(`/vpn/get-config`)
+        const reader = await response.body;
+        const stream = await new Response(reader);
+        const blob = await stream.blob();
+        const fileUrl = await URL.createObjectURL(blob)
+
+        const contentDispositionHeader = await response.headers.get('Content-disposition').split('=')
+        const fileName = contentDispositionHeader[contentDispositionHeader.length - 1]
+
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = fileUrl;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(fileUrl);
+        
+        return;
+      }
+
+      function switchDownloadBtnState (buttonStatus, selectedTab) {
+        const innerHTML = buttonStatus === 'enabled' ? 
+        `Download` : 
+          `<span class="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></span>Loading...`
+
+          let downloadOVPNCfgBtn;
+          if (selectedTab === '#pills-windows') downloadOVPNCfgBtn = document.getElementById('download-ovpn-config-button-windows')
+          if (selectedTab === '#pills-linux') downloadOVPNCfgBtn = document.getElementById('download-ovpn-config-button-linux')
+          if (selectedTab === '#pills-macos') downloadOVPNCfgBtn = document.getElementById('download-ovpn-config-button-macos')
+          downloadOVPNCfgBtn.innerHTML = innerHTML
+          
+          if (buttonStatus === 'enabled') downloadOVPNCfgBtn.disabled = false
+          else downloadOVPNCfgBtn.disabled = true
+      }
+
+      async function downloadOVPNConfig() {
+        const selectedTab = $('#vpn-guide li a.active').attr('href')
+        switchDownloadBtnState('disabled', selectedTab)
+        await downloadOVPNConfigFile()
+        await $.post('/account/dashboard/download-config')
+        switchDownloadBtnState('enabled', selectedTab)
+      }
+</script>
+</div>
+</div>
+<div id="nav-attackbox">
+<div class="text-center">
+<h4>AttackBox</h4>
+<p class="faded">Use your own web-based linux machine to access machines on TryHackMe</p>
+</div>
+<p>To start your AttackBox in the room, click the <a class="preventDefault" onclick="showAttackBoxBtnFromSlideout()" href="#">Start AttackBox</a> button. Your private machine will take 2 minutes to start.</p>
+<p>Free users get 1 free AttackBox hour. <a class="hacker-green" href="/why-subscribe">Subscribed</a> users get more powerful machines with unlimited deploys.</p>
+</div>
+</div>
+<span id="slideout-conn-hideip" onclick="hideNavConnIP()">Hide IP</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+
+    const navConnVPNEl = document.querySelector('#nav-openvpn')
+    const navConnAttackBoxEl = document.querySelector('#nav-attackbox')
+    const navConnOptions = document.querySelector('#slideout-conn-options')
+
+    const navConnBkBtn = document.querySelector('#slideout-bk')
+
+    function showVPNSteps() {
+        navConnOptions.style.display = 'none'
+        navConnVPNEl.style.display = 'block'
+        navConnBkBtn.style.display = 'block'
+    }
+
+    function showAttackBoxSteps() {
+        navConnOptions.style.display = 'none'
+        navConnAttackBoxEl.style.display = 'block'
+        navConnBkBtn.style.display = 'block'
+    }
+
+    function showSlideoutConnOptions() {
+        navConnVPNEl.style.display = 'none'
+        navConnAttackBoxEl.style.display = 'none'
+        navConnBkBtn.style.display = 'none'
+        navConnOptions.style.display = 'block'
+    }
+
+    function showAttackBoxBtnFromSlideout() {
+        $('#navConnModal').modal('toggle')
+        setTimeout(function() {
+            showAttackBoxBtnIntro()
+        }, 100)   
+    }
+
+  </script>
+</div>
+<script src="https://assets.tryhackme.com/js/notify.js"></script>
+<script src="https://assets.tryhackme.com/js/api-requests.js?v=2.2"></script>
+<script src="https://assets.tryhackme.com/js/utils/events.js?v=0.7"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.29.0/apexcharts.min.js"></script> 
+<script src="https://assets.tryhackme.com/js/rooms/public/chart.js?v=0.4"></script>
+<script src="https://assets.tryhackme.com/js/rooms/public/expire.js"></script>
+<script src="https://assets.tryhackme.com/js/rooms/public/sockets.js"></script>
+<script src="https://assets.tryhackme.com/js/utils/faqSearch.js"></script>
+<script src="https://assets.tryhackme.com/js/utils/certificate.js?v=1.1"></script>
+<script src="https://assets.tryhackme.com/js/rooms/generic/utils.js"></script>
+<script src="https://assets.tryhackme.com/js/rooms/public/roomSpecific.js?v=0.6"></script>
+<script src="https://assets.tryhackme.com/js/utils/confetti.js"></script>
+<script src="https://assets.tryhackme.com/js/utils/videos.js?v=1.3"></script>
+<script src="https://assets.tryhackme.com/js/libs/intro.js"></script>
+<script src="https://assets.tryhackme.com/js/libs/prism.js?v=0.1"></script>
+<script src="https://assets.tryhackme.com/js/libs/asciinema-player.js"></script>
+<script src="https://assets.tryhackme.com/js/libs/magnific-popup.min.js"></script>
+<script src="https://assets.tryhackme.com/js/rooms/public/introjsLogic.js?v=0.3"></script>
+<script src="https://assets.tryhackme.com/js/rooms/public/logic.js?v=3.27"></script>
+<script src="https://assets.tryhackme.com/js/rooms/public/tasks.js?v=2.14"></script>
+<script src="https://assets.tryhackme.com/js/rooms/public/connection-status.js?v=0.5"></script>
+<script src="https://assets.tryhackme.com/js/rooms/public/glossary.js"></script>
+<script src="https://assets.tryhackme.com/js/rooms/public/room-mymachine.js?v=2.11"></script>
+<script src="https://assets.tryhackme.com/js/heartbeat.js" defer></script>
+<script>
+    const shouldSeePromotedFirstFourRoomsBadge = false;
+
+    let height
+    $(window).scroll(function () { /* Function to make IP information sticky. */
+      if (height == undefined || height < 30) {
+        height = ($('#instance-info').offset().top)
+      }
+      let scroll = $(window).scrollTop()
+      if (((scroll >= (height + 150))) && height > 30) {
+        $("#instance-info").addClass('instance-sticky')
+      } else if ((scroll <= (height))) {
+        $("#instance-info").removeClass("instance-sticky")
+      }
+    })
+
+    const csrfToken = "JjLa52Gv-0AMj9sVXaby8bsixYyTjhdZCs9I"
+    $.ajaxSetup({ headers: { 'CSRF-Token': csrfToken } }) // all $.post headers include token (needs csrfProtection middleware)
+
+    const roomCode = "adventofcyber2023"
+    const simpleRoom = true 
+    const events = JSON.parse(atob("eyJ0aWNrZXRzIjpmYWxzZX0="))
+
+    let userObj = { 
+      subscribed: 0,
+      splitScreen: false,
+      path: "presecurity",
+      tutorial: {
+        rooms: true,
+        attackbox: true,
+        staticsite: true
+      },
+      experiments: JSON.parse(atob("eyJzaG93RWFzeVBhdGgiOnRydWUsImxpbmtUb0J1c2luZXNzUGFnZUluTmF2QmFyRW5hYmxlZCI6ZmFsc2V9")),
+      dateSignUp: "Tue Jan 31 2023 19:08:46 GMT+0000 (Greenwich Mean Time)",
+    }
+
+    const roomSettings = {
+      remAttackBoxBtn : false
+    };
+
+    const heartbeatInterval = 30;
+
+    const cloudEnabled = false 
+    let cloudObj
+
+    initRoom()
+    checkVideoTab()
+    if(!simpleRoom) showChart(roomCode)
+
+    checkRoomAwards(roomCode)
+
+    getRoomVotes()
+
+    displayStreakFreezeAwardedFromMemory();
+    
+    window.addEventListener('load', function () {
+      introjsInit(roomCode)
+    })
+
+  </script>
+</body>
+</html>
