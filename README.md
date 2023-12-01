@@ -3,3 +3,15 @@
 # Advent Of Cyber 2023 Walkthrough
 
 🎄 Welcome to the official walkthrough repository for Advent of Cyber 2023! Dive into the festive cybersecurity challenges offered by TryHackMe and follow this guide for step-by-step solutions. Whether you're a beginner or an experienced hacker, this walkthrough will help you navigate through each task and level up your skills. Happy hacking and enjoy the adventure! 🚀🔐
+
+
+# Topics
+Topics that will be covered in the event are:
+  ```python
+  Penetration testing
+  Security operations
+  and engineering Digital
+  forensics and incident response
+  Machine learning
+  Malware analysis
+```
