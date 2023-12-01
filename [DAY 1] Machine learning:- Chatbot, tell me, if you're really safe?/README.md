@@ -7,25 +7,25 @@
 <p>In her mind, McSkidy's Security team have been the company's rockstars for years, so it's only natural for them to be the "A Team". McHoneyBell's new team will be second to them but equally as important. They'll operate in the shadows.</p>
 <br>
 <p>McHoneyBell puts their friendly rivalry to the back of her mind and focuses on the tasks at hand. She reviews the day's agenda and sees that her team's first task is to check if the internal chatbot created by AntarctiCrafts meets Best Festival Company's security standards. She's particularly excited about the chatbot, especially since discovering it's powered by artificial intelligence (AI). This means her team can try out a new technique she recently learned called prompt injection, a vulnerability that affects insecure chatbots powered by natural language processing (NLP).</p>
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
+.<br>
 
 <h5 style="padding-right: 18px; font-weight: 800; font-style: itcalic; font-size: 18px;">Answer Of the question below</h5>
 
