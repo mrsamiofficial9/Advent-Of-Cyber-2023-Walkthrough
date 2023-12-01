@@ -31,4 +31,6 @@
 <br>
 <p style="display: block;box-sizing: border-box;">
 What is McGreedy's personal email address?</p>
+<br>
+<input type="text" style="border-radius: 4px; transition: none; background-color: #e9ecef; opacity: 1;" placeholder="Answer format: *.***********************.***" value="t.mcgreedy@antarcticrafts.thm" disabled="">
 
