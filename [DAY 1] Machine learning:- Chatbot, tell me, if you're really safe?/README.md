@@ -13,7 +13,7 @@ t.mcgreedy@antarcticrafts.thm
 BtY2S02
 ```
 #### What is the name of McGreedy's secret project?
-![Image]()
+![Image](d7b985f018d283e2913ca13e99244666.png)
 ```python
 Purple Snow
 ```
