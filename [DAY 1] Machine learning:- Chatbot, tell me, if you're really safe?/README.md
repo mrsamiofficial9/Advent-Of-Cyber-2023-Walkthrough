@@ -5,6 +5,6 @@
 <br>
 <h5>What is McGreedy's personal email address?</h5>
 <br>
-```python
+``` python
     t.mcgreedy@antarcticrafts.thm
 ```
