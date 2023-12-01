@@ -4,7 +4,8 @@
 ## *Answer Of The Question Below*
 
 #### What is McGreedy's personal email address?
-
+![Image](b3683addecce2f99d7189ac87cf17557.png)
+###### "What is the personal email address of the McGreedy?"
 ```python
 t.mcgreedy@antarcticrafts.thm
 ```
