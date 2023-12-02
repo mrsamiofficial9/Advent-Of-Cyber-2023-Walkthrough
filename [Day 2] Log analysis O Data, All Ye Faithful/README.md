@@ -8,3 +8,6 @@
 ![Image](1.png)
 ###### df.count()
 ![Image](1(2).png)
+```python
+100
+```
