@@ -11,3 +11,10 @@
 ```python
 100
 ```
+#### What IP address sent the most amount of traffic during the packet capture?
+![Image](2.png)
+###### df.groupby(['Source']).size()
+![Image](2(2).png)
+```python
+10.10.1.4
+```
