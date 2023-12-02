@@ -6,5 +6,5 @@
 
 #### How many packets were captured (looking at the PacketNumber)?
 ![Image](1.png)
-###### "df.count()"
+###### df.count()
 ![Image](1(2).png)
