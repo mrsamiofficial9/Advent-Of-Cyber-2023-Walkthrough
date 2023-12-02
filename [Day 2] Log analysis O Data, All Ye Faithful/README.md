@@ -18,3 +18,10 @@
 ```python
 10.10.1.4
 ```
+#### What was the most frequent protocol?
+![Image](3.png)
+###### df.groupby(['Protocol']).size()
+![Image](3(2).png)
+```python
+ICMP
+```
