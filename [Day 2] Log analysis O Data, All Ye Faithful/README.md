@@ -5,4 +5,6 @@
 ## *Answer Of The Question Below*
 
 #### How many packets were captured (looking at the PacketNumber)?
-![Image](
+![Image](1.png)
+###### "df.count()"
+![Image](1(1).png)
