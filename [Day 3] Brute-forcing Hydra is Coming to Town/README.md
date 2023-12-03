@@ -62,3 +62,8 @@
 </html>
 ```
 ![Image](2.png)
+####### Generating the Password List The numeric keypad shows 16 characters, 0 to 9 and A to F, i.e., the 
+ ####### hexadecimal digits. We need to prepare a list of all the PIN codes that match this criteria. We will use ####### Crunch, a tool that generates a list of all possible password combinations based on given criteria. 
+ 
+
+
