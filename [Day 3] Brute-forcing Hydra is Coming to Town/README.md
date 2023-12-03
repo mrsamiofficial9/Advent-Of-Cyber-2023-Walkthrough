@@ -12,7 +12,12 @@
 </html>
 ```
 ![Image](2.png)
+
+#### Generating the Password List
 ![Image](3.png)
+
+![Image](4.png)
+
  
 
 
