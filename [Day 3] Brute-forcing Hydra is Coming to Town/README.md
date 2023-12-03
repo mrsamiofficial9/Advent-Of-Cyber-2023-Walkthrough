@@ -33,11 +33,21 @@ hydra -l '' -P 3pass.txt -f -v 10.10.172.65 http-post-form "/login.php:pin=^PASS
 
 #### Found Pin:
 ![image](6.png)
-
 ```python
 6F5
 ```
 ![image](7.png)
+
+#### Flag:
+```python
+THM{pin-code-brute-force}
+```
+![image](9.png)
+
+#### End:
+![image](10.png)
+
+
 
 
 
