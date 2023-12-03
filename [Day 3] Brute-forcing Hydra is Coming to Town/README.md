@@ -14,8 +14,14 @@
 ![Image](2.png)
 
 #### Generating the Password List
+```bash
+mkdir passlist && cd passlist
+```
 ![Image](3.png)
 
+```bash
+crunch 3 3 0123456789ABCDEF -o 3digits.txt
+```
 ![Image](4.png)
 
  
