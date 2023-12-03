@@ -5,3 +5,4 @@
 ## *Answer Of The Question Below*
 
 #### Using crunch and hydra, find the PIN code to access the control system and unlock the door. What is the flag?
+![IMAGE](1.png)
