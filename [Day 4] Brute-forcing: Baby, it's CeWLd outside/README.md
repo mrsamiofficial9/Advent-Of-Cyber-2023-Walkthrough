@@ -2,6 +2,6 @@
 # The Story 
 ![Image](https://tryhackme-images.s3.amazonaws.com/user-uploads/645b19f5d5848d004ab9c9e2/room-content/b62f6780cbab7289a9494f4373b6dc37.svg)
 
-## *Answer Of The Question Below
+## * Answer Of The Question Below*
 
 
